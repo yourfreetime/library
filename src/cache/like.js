@@ -1,6 +1,6 @@
 import { LIST_POSTS_FEED } from '../queries';
 
-export const createLike = ({ postId }, cache, { data }) => {
+export const uCreateLike = ({ postId }, cache, { data }) => {
   const { listPostsFeed } = cache.readQuery({ query: LIST_POSTS_FEED });
 
   const posts = listPostsFeed.map(item =>
@@ -13,7 +13,7 @@ export const createLike = ({ postId }, cache, { data }) => {
   });
 };
 
-export const deleteLike = ({ postId }, cache, { data }) => {
+export const uDeleteLike = ({ postId }, cache, { data }) => {
   const { listPostsFeed } = cache.readQuery({ query: LIST_POSTS_FEED });
 
   const posts = listPostsFeed.map(item =>

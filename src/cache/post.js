@@ -1,6 +1,6 @@
 import { LIST_POSTS_FEED } from '../queries';
 
-export const deletePost = ({ postId }, cache) => {
+export const uDeletePost = ({ postId }, cache) => {
   const { listPostsFeed } = cache.readQuery({ query: LIST_POSTS_FEED });
 
   cache.writeQuery({
@@ -11,7 +11,7 @@ export const deletePost = ({ postId }, cache) => {
   });
 };
 
-export const createPost = (_, cache, { data }) => {
+export const uCreatePost = (_, cache, { data }) => {
   const dataList = cache.readQuery({ query: LIST_POSTS_FEED });
 
   cache.writeQuery({
@@ -20,7 +20,7 @@ export const createPost = (_, cache, { data }) => {
   });
 };
 
-export const updatePost = ({ postId }, cache, { data }) => {
+export const uUpdatePost = ({ postId }, cache, { data }) => {
   const { listPostsFeed } = cache.readQuery({ query: LIST_POSTS_FEED });
 
   const posts = listPostsFeed.map(item =>

@@ -1,3 +1,3 @@
-export { createPost, deletePost, updatePost } from './post';
-export { createComment } from './comment';
-export { createLike, deleteLike } from './like';
+export { uCreatePost, uDeletePost, uUpdatePost } from './post';
+export { uCreateComment } from './comment';
+export { uCreateLike, uDeleteLike } from './like';
