@@ -1,18 +1,20 @@
 {
   "name": "yourfreetime",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "YourFreetime utils",
   "repository": "https://github.com/yourfreetime/library",
   "license": "MIT",
   "files": [
-    "dist",
+    "cache",
+    "mutations",
+    "queries",
     "README.md"
   ],
   "bugs": {
     "url": "https://github.com/yourfreetime/library/issues"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir dist --copy-files"
+    "build": "cross-env NODE_ENV=production babel src --out-dir ./ --copy-files"
   },
   "keywords": [
     "your",
