@@ -1,3 +1,2 @@
-import * as postCache from './post';
-
-export default { ...postCache };
+export { updateCreatePost } from './post';
+export { updateDeletePost } from './post';

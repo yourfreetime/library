@@ -2,8 +2,6 @@
   "name": "yourfreetime",
   "version": "0.1.0",
   "description": "YourFreetime utils",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "repository": "https://github.com/yourfreetime/library",
   "license": "MIT",
   "files": [
