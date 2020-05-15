@@ -1,3 +1,3 @@
-import * as postCache from "./post";
+import * as postCache from './post';
 
 export default { ...postCache };

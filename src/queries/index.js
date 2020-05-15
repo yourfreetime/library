@@ -1,3 +1,3 @@
-import * as postQueries from "./post";
+import * as postQueries from './post';
 
 export default { ...postQueries };

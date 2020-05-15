@@ -1,3 +1,3 @@
-import * as postMutations from "./post";
+import * as postMutations from './post';
 
 export default { ...postMutations };

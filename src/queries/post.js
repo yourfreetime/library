@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export const LIST_POSTS_FEED = gql`
   query listPostsFeed {

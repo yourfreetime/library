@@ -1,4 +1,4 @@
-import { LIST_POSTS_FEED } from "services/post";
+import { LIST_POSTS_FEED } from 'services/post';
 
 export const updateDeletePost = ({ postId }, cache) => {
   const { listPostsFeed } = cache.readQuery({ query: LIST_POSTS_FEED });
