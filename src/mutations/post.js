@@ -1,3 +1,5 @@
+import gql from "graphql-tag";
+
 export const CREATE_POST = gql`
   mutation createPost($text: String!) {
     createPost(input: { text: $text }) {
