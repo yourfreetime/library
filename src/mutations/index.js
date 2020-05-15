@@ -1,8 +1,3 @@
-export { CREATE_POST } from './post';
-export { UPDATE_POST } from './post';
-export { DELETE_POST } from './post';
-
+export { CREATE_POST, UPDATE_POST, DELETE_POST } from './post';
 export { CREATE_COMMENT } from './comment';
-
-export { LIKE_POST } from './like';
-export { UNLIKE_POST } from './like';
+export { CREATE_LIKE, DELETE_LIKE } from './like';

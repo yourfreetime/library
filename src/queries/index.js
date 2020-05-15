@@ -1,2 +1,1 @@
-export { GET_POST } from './post';
-export { LIST_POSTS_FEED } from './post';
+export { LIST_POSTS_FEED, GET_POST } from './post';
