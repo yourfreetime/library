@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const LIST_POSTS_FEED = gql`
-  query listPostsFeed {
-    listPostsFeed {
+  query listPostsFeed($filter: PostFeedFilter) {
+    listPostsFeed(filter: $filter) {
       id
       text
       dateCreated
@@ -57,5 +57,5 @@ export const GET_POST = gql`
 
 export default {
   LIST_POSTS_FEED,
-  GET_POST
+  GET_POST,
 };
