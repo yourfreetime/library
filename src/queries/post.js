@@ -24,6 +24,30 @@ export const LIST_POSTS_FEED = gql`
   }
 `;
 
+export const LIST_POSTS_BY_LOCATION = gql`
+  query listPostsByLocation($filter: PostLocationFilter!) {
+    listPostsByLocation(filter: $filter) {
+      id
+      text
+      dateCreated
+      author {
+        id
+        name
+        picture
+      }
+      likes {
+        date
+        user {
+          id
+        }
+      }
+      comments {
+        dateCreated
+      }
+    }
+  }
+`;
+
 export const GET_POST = gql`
   query getPost($postId: String!) {
     getPost(postId: $postId) {
