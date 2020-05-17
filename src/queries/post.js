@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const LIST_POSTS_FEED = gql`
-  query listPostsFeed($filter: PostFeedFilter) {
-    listPostsFeed(filter: $filter) {
+  query listPostsFeed($search: String) {
+    listPostsFeed(filter: { search: $search }) {
       id
       text
       dateCreated
@@ -25,8 +25,10 @@ export const LIST_POSTS_FEED = gql`
 `;
 
 export const LIST_POSTS_BY_LOCATION = gql`
-  query listPostsByLocation($filter: PostLocationFilter!) {
-    listPostsByLocation(filter: $filter) {
+  query listPostsByLocation($latitude: Float!, $longitude: Float!) {
+    listPostsByLocation(
+      filter: { latitude: $latitude, longitude: $longitude }
+    ) {
       id
       text
       dateCreated
