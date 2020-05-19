@@ -80,8 +80,3 @@ export const GET_POST = gql`
     }
   }
 `;
-
-export default {
-  LIST_POSTS_FEED,
-  GET_POST,
-};
