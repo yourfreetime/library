@@ -1,5 +1,29 @@
 import gql from 'graphql-tag';
 
+export const LIST_POSTS = gql`
+  query listPosts($authorId: String, $search: String) {
+    listPosts(filter: { authorId: $authorId, search: $search }) {
+      id
+      text
+      dateCreated
+      author {
+        id
+        name
+        picture
+      }
+      likes {
+        date
+        user {
+          id
+        }
+      }
+      comments {
+        dateCreated
+      }
+    }
+  }
+`;
+
 export const LIST_POSTS_FEED = gql`
   query listPostsFeed($search: String) {
     listPostsFeed(filter: { search: $search }) {
