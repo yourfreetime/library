@@ -20,21 +20,10 @@ export const uCreateSavedPost = ({ userId }, cache, { data }) => {
   }
 
   try {
-    const cacheListSavedPosts = cache.readQuery({
-      query: LIST_SAVED_POSTS,
-      variables: { userId }
-    });
-
     cache.writeQuery({
       query: LIST_SAVED_POSTS,
       variables: { userId },
-      data: {
-        ...cacheListSavedPosts,
-        getUser: {
-          ...cacheListSavedPosts.getUser,
-          savedPosts: data.createSavedPost
-        }
-      }
+      data: { listSavedPosts: data.createSavedPost }
     });
   } catch (e) {
     //
@@ -61,21 +50,10 @@ export const uDeleteSavedPost = ({ userId }, cache, { data }) => {
   }
 
   try {
-    const cacheListSavedPosts = cache.readQuery({
-      query: LIST_SAVED_POSTS,
-      variables: { userId }
-    });
-
     cache.writeQuery({
       query: LIST_SAVED_POSTS,
       variables: { userId },
-      data: {
-        ...cacheListSavedPosts,
-        getUser: {
-          ...cacheListSavedPosts.getUser,
-          savedPosts: data.deleteSavedPost
-        }
-      }
+      data: { listSavedPosts: data.deleteSavedPost }
     });
   } catch (e) {
     //
