@@ -1,5 +1,18 @@
 import gql from 'graphql-tag';
 
+export const LIST_USERS = gql`
+  query listUsers($search: String) {
+    listUsers(filter: { search: $search }) {
+      id
+      name
+      picture
+      savedPosts {
+        date
+      }
+    }
+  }
+`;
+
 export const GET_USER_DETAILS = gql`
   query getUser($userId: String!) {
     getUser(userId: $userId) {
