@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 export const CREATE_SAVED_POST = gql`
   mutation createSavedPost($postId: String!) {
     createSavedPost(input: { postId: $postId }) {
+      id
       date
       post {
         id
@@ -30,6 +31,7 @@ export const CREATE_SAVED_POST = gql`
 export const DELETE_SAVED_POST = gql`
   mutation deleteSavedPost($postId: String!) {
     deleteSavedPost(input: { postId: $postId }) {
+      id
       date
       post {
         id

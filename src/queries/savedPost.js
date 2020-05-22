@@ -5,21 +5,24 @@ export const LIST_SAVED_POSTS = gql`
     getUser(userId: $userId) {
       savedPosts {
         id
-        text
-        dateCreated
-        author {
-          id
-          name
-          picture
-        }
-        likes {
-          date
-          user {
-            id
-          }
-        }
-        comments {
+        date
+        post {
+          text
           dateCreated
+          author {
+            id
+            name
+            picture
+          }
+          likes {
+            date
+            user {
+              id
+            }
+          }
+          comments {
+            dateCreated
+          }
         }
       }
     }

@@ -7,6 +7,7 @@ export const GET_USER_DETAILS = gql`
       name
       picture
       savedPosts {
+        id
         date
       }
     }
